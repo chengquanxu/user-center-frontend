@@ -25,7 +25,7 @@
 	docker run -p 80:80 -d user-center-frontend:0.0.1
 	```
 
-6. 访问ip即可，启动[后端](https://github.com/dingxinliang88/user-center-backend)即可开始数据交互
+6. 访问ip即可，启动[后端](https://github.com/chengquanxu/user-center-backend)即可开始数据交互
 
 
 
