@@ -1,57 +1,31 @@
-# Ant Design Pro
+# 用户中心前端
 
-This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
+## 如何上线？
 
-## Environment Prepare
+1. 更改`app.tsx`128行后端请求地址
 
-Install `node_modules`:
+2. 打包项目
 
-```bash
-npm install
-```
+	```sh
+	npm run build
+	```
 
-or
+3. 将dist目录上传服务器
 
-```bash
-yarn
-```
+4. 上传Dockerfile和`docker`文件夹一起上传至和dist同级的目录
 
-## Provided Scripts
+5. 构建镜像
 
-Ant Design Pro provides some useful script to help you quick start and build with web project, code style check and test.
+	```sh
+	docker build -t user-center-frontend:0.0.1 .
+	```
 
-Scripts provided in `package.json`. It's safe to modify or add additional script:
+5. 启动镜像
+	```sh
+	docker run -p 80:80 -d user-center-frontend:0.0.1
+	```
 
-### Start project
+6. 访问ip即可，启动[后端](https://github.com/dingxinliang88/user-center-backend)即可开始数据交互
 
-```bash
-npm start
-```
 
-### Build project
 
-```bash
-npm run build
-```
-
-### Check code style
-
-```bash
-npm run lint
-```
-
-You can also use script to auto fix some lint error:
-
-```bash
-npm run lint:fix
-```
-
-### Test code
-
-```bash
-npm test
-```
-
-## More
-
-You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).
